@@ -1,0 +1,36 @@
+.Dd JANUARY 29, 2019
+.Dt FULGURATE-SHOW-SCHEDULE 1
+.Os
+
+.Sh NAME
+.Nm fulgurate-show-schedule
+.Nd print information about card scheduling
+
+.Sh SYNOPSIS
+.Nm
+.Op Fl n Ar YYYY-MM-DD
+.Ar CARDS-FILE
+
+.Sh DESCRIPTION
+.Nm
+prints information about how the cards in a file are currently
+scheduled. The first column in the output is the date, the second is
+the number of days in the future, and the third is the number of cards
+scheduled for that time. A -1 in the second column indicates new cards,
+while 0 indicates the cards that are ready for review.
+
+.Sh OPTIONS
+.Bl -tag -width Ds
+.It Fl n Ar YYYY-MM-DD
+Set the current time. Defaults to the system clock.
+
+.Sh EXIT STATUS
+.Ex -std
+
+.Sh SEE ALSO
+.Xr fulgurate-run 1 ,
+.Xr fulgurate-import 1 .
+
+.Sh AUTHORS
+.An Max Whitney
+.An pranomostro Aq Mt pranomostro@posteo.net

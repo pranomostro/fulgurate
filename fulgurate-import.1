@@ -1,0 +1,34 @@
+.Dd JANUARY 29, 2019
+.Dt FULGURATE-IMPORT 1
+.Os
+
+.Sh NAME
+.Nm fulgurate-import
+.Nd convert a two-column TSV file to a flashcard file
+
+.Sh SYNOPSIS
+.Nm
+.Op Fl n Ar YYYY-MM-DD
+.Ar TSV-FILE
+.Op Ar CARDS-FILE
+
+.Sh DESCRIPTION
+Takes a tab-separated value file where the columns correspond to the first
+(top) and second (bottom) fields of the card respectively, and produces
+a cards file with the cards at initial state.
+
+.Sh OPTIONS
+.Bl -tag -width Ds
+.It Fl n Ar YYYY-MM-DD
+Set the current time. Defaults to the system clock.
+
+.Sh EXIT STATUS
+.Ex -std
+
+.Sh SEE ALSO
+.Xr fulgurate-run 1 ,
+.Xr fulgurate-show-schedule 1 .
+
+.Sh AUTHORS
+.An Max Whitney
+.An pranomostro Aq Mt pranomostro@posteo.net
